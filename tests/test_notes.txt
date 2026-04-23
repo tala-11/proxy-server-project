@@ -1,0 +1,70 @@
+==========================
+PROXY SERVER TESTING NOTES
+==========================
+
+Test 1: Server Startup
+Description:
+The proxy server was started using main.py.
+
+Expected Result:
+Server initializes correctly and listens on the specified host and port.
+
+Actual Result:
+Server started successfully and displayed listening information.
+
+Status: PASSED
+
+
+Test 2: Client Connection Handling
+Description:
+A client request was sent to the proxy using curl.
+
+Command Used:
+curl.exe -x http://localhost:8888 http://example.com
+
+Expected Result:
+Server accepts connection and processes request.
+
+Actual Result:
+Connection was accepted and processed correctly.
+
+Status: PASSED
+
+
+Test 3: Request Reception
+Description:
+Verified that the server correctly receives request data from the client.
+
+Expected Result:
+Request data is received and passed to routing layer.
+
+Actual Result:
+Request received and forwarded to routing function successfully.
+
+Status: PASSED
+
+
+Test 4: Multithreading
+Description:
+Multiple client requests were sent to the proxy server.
+
+Expected Result:
+Each client is handled in a separate thread.
+
+Actual Result:
+Multiple threads were created and handled requests concurrently.
+
+Status: PASSED
+
+
+Test 5: Routing Layer Integration
+Description:
+Verified that the request is passed from client handler to routing function.
+
+Expected Result:
+Routing function receives request and sends response.
+
+Actual Result:
+Temporary response successfully sent from routing layer.
+
+Status: PASSED
